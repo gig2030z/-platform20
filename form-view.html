@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>التحقق الجغرافي للمستخدم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- 🌍 Leaflet Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🛰️ التحقق الجغرافي للمستخدم</h1>
+    <p>سيتم تحديد موقعك بدقة، والتحقق من وجودك داخل النطاق الجغرافي المسموح قبل فتح النموذج.</p>
+
+    <!-- 🔄 زر التحقق مع تحميل مرئي -->
+    <button id="openForm" class="button">
+      <span class="spinner" style="display:none;"></span>
+      <span class="btn-text">فتح النموذج الآن</span>
+    </button>
+
+    <!-- 💬 الرسائل والتنبيهات -->
+    <div id="status" class="status" style="display:none;"></div>
+
+    <!-- 🔎 صندوق debug لفحص الردود -->
+    <pre id="debug" style="display:none;"></pre>
+
+    <!-- 🗺️ خريطة تفاعلية تعرض الموقع والمضلع -->
+    <div id="map"></div>
+
+    <!-- 🔙 رابط العودة -->
+    <a class="back" href="./index.html">← العودة</a>
+  </div>
+
+  <!-- ⚙️ سكربت المنطق -->
+  <script src="./form.js"></script>
+</body>
+</html>

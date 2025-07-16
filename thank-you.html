@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>شكرًا لمشاركتك</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const log = document.getElementById("timestamp");
+      const time = new Date().toLocaleString("ar-SA", {
+        year: "numeric", month: "long", day: "numeric",
+        hour: "2-digit", minute: "2-digit", second: "2-digit"
+      });
+      log.textContent = `🕒 وقت الإرسال: ${time}`;
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>✅ تم إرسال النموذج بنجاح</h1>
+    <p>نشكرك على المشاركة في الاستبيان.</p>
+    <p id="timestamp"></p>
+    <a class="button" href="./index.html">العودة للرئيسية</a>
+  </div>
+</body>
+</html>
